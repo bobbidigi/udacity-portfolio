@@ -27,7 +27,7 @@ header {
 }
 
 .hero {
-    background: url("https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&h=350");
+    background: url("../images/hero-code-bg.jpeg");
     height: 45vh;
     margin: 2vh 0;
     width: 100%;
