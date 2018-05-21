@@ -1,24 +1,56 @@
-* {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    background-color: rgba(2, 179, 228, .01);
 }
 
+
+/* global styles */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-item {
+    font-size: 5vw;
+}
+
+.text-hdr {
+    font-size: 7vw;
+}
+
+
+/* end global */
+
 header {
-    padding: 1em .5em;
-    display: flex;
     background: #02b3e4;
     color: #fff;
     border-bottom: 3px solid #7d97ad;
     text-transform: uppercase;
     font-family: sans-serif;
+    text-align: center;
+    padding: .5em 0;
 }
 
-.logo {
-    width: 50%;
+.logo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 80%;
 }
 
-#logo {
-    margin: 1em 0;
+.header-info h2 {
+    padding: .333em;
+    letter-spacing: 7px;
+}
+
+.header-info p {
+    letter-spacing: 3px;
 }
 
 .name {
@@ -27,88 +59,136 @@ header {
 }
 
 .hero {
-    background: url("../images/hero-code-bg.jpeg");
-    height: 45vh;
-    margin: 2vh 0;
-    width: 100%;
+    background-image: url("../images/hero-code-bg.jpeg");
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero-goals {
+    background-color: #000;
+    background-color: rgba(2, 179, 228, .5);
+    min-width: 100%;
+    height: auto;
+    color: #fff;
+    padding: 14vw 7vw;
+    text-align: center;
+}
+
+.hero-goals h2 {
+    margin-bottom: 5%;
+}
+
+.featured-work {
+    padding: 0 2vw;
 }
 
 .featured-work h2 {
+    text-align: center;
+    letter-spacing: 5px;
     text-transform: capitalize;
     color: #7d97ad;
     font-family: sans-serif;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 .work {
     margin: .5em;
-    border-radius: 3px;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    border-radius: 0.375rem;
+    transition: all 0.5s ease;
     padding-bottom: .5em;
+    overflow: hidden;
     -webkit-box-shadow: 0px 2px 5px 2px rgba(102, 98, 102, .5);
     -moz-box-shadow: 0px 2px 5px 2px rgba(102, 98, 102, .5);
     box-shadow: 0px 2px 5px 2px rgba(102, 98, 102, .5);
 }
 
-.work img {
-    margin-bottom: 2vh 0;
-    width: 100%;
-}
-
-.work h1 {
-    color: #02b3e4;
+.work p,
+a {
     text-align: center;
     font-family: sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     text-transform: uppercase;
-}
-
-.work p {
-    text-align: center;
-}
-
-.work a {
-    color: black;
-    letter-spacing: 1px;
-    font-size: 16px;
+    color: #02b3e4;
     text-decoration: none;
     font-family: sans-serif;
+    font-weight: 700;
 }
 
-@media screen and (min-width: 700px) {
-    .container {
-        margin: 0 1em;
+
+/* media queries */
+
+@media screen and (min-width: 480px) {
+    .text-item {
+        font-size: 4vw;
     }
-    #work {
+    .text-hdr {
+        font-size: 6vw;
+    }
+    header {
+        margin: 0;
+        padding: 4vw;
         display: flex;
+        text-align: right;
     }
-    .work {
-        border-radius: 3px;
-        width: 33.333333%;
-        margin: .25em;
-        padding: .25em;
+    .header-logo {
+        margin: auto 0;
+        width: 40%;
+    }
+    .header-info {
+        width: 60%;
+    }
+    .header-info h2 {
+        padding: 0;
+        letter-spacing: 5px;
+    }
+    .header-info p {
+        letter-spacing: 2px;
     }
     .work img {
-        height: 20vh;
+        width: 100%;
+    }
+    .hero-goals {
+        padding: 14vw 14vw;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .text-item {
+        font-size: 3vw;
+    }
+    .text-hdr {
+        font-size: 5vw;
+    }
+    .work-container {
+        margin: 0 auto;
+        display: flex;
     }
 }
 
 @media screen and (min-width: 950px) {
-    .container {
-        margin: 0 3em 1em 3em;
+    .text-item {
+        font-size: 2vw;
     }
-    .work {
-        margin: .6em;
+    .text-hdr {
+        font-size: 4vw;
     }
-    .work img {
-        height: 30vh;
+    .hero-goals {
+        padding: 14vw 16vw;
     }
 }
 
 @media screen and (min-width: 1100px) {
-    .work {
-        margin: 1em;
+    .header-logo {
+        max-width: 700px;
     }
-    .work img {
-        height: 40vh;
+    .header-info {
+        max-width: 700px;
+    }
+    .hero-goals {
+        padding: 14vw 20vw;
+    }
+    .work-container {
+        max-width: 1300px;
     }
 }
